@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const port = process.env.PORT || 3001;
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 var app = new express();
@@ -245,5 +246,5 @@ app.delete('/delete_author/:id',verifyToken,(req,res)=>{
 
 //Port Configuration
 
-app.listen(3001,()=>
-console.log('Listening at port 3001'));
+app.listen(port,()=>
+           {console.log('Listening at port'+port)});
